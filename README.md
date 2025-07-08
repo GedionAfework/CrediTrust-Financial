@@ -20,7 +20,6 @@ creditrust-complaint-analysis/
 ├── src/                             # Source code
 │   ├── preprocessing.py             # Data cleaning and filtering
 │   ├── embedding.py                 # Text chunking, embedding, and indexing
-│   └── generate_metrics.py          # Metrics generation for report
 ├── vector_store/                    # FAISS vector store
 │   ├── complaint_index.faiss        # FAISS index
 │   └── complaint_metadata.pkl       # Metadata for embeddings
@@ -77,21 +76,6 @@ creditrust-complaint-analysis/
   python src/embedding.py
   ```
 - **Output**: Generates `vector_store/complaint_index.faiss` and `vector_store/complaint_metadata.pkl`.
-
-### Generating Metrics for Report
-- Run `generate_metrics.py` to compute detailed metrics for the report.
-  ```bash
-  python src/generate_metrics.py
-  ```
-- **Output**: Saves metrics to `metrics.json` and prints them to the console.
-
-### Compiling the Report
-- Compile `report.tex` using PDFLaTeX to generate the PDF report.
-  ```bash
-  pdflatex report.tex
-  pdflatex report.tex  # Run twice for table of contents
-  ```
-- **Output**: Generates `report.pdf` with detailed results for Tasks 1 and 2.
 
 ## Git Branches
 - `main`: Initial setup and requirements.
