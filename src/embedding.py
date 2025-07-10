@@ -44,7 +44,8 @@ def process_complaints(input_path, vector_store_path, metadata_path):
             metadata.append({
                 'complaint_id': row['Complaint ID'],
                 'product': row['Product'],
-                'chunk_id': f"{row['Complaint ID']}_{i}"
+                'chunk_id': f"{row['Complaint ID']}_{i}",
+                'text': chunk  # Store chunk text in metadata
             })
     
     embeddings = generate_embeddings(chunks)
